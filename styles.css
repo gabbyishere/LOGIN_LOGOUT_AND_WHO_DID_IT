@@ -1,0 +1,343 @@
+
+/* =====================================
+   KOPE SHOP - PURPLE & COFFEE THEME
+   ===================================== */
+
+:root {
+    --purple: #8064A2;
+    --dark-purple: #59416F;
+    --light-purple: #E9DDF2;
+    --beige: #F5EBDD;
+    --cream: #FCF8F3;
+    --brown: #654735;
+    --white: #FFFFFF;
+    --border: #E5D5C7;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--beige);
+    color: var(--brown);
+    line-height: 1.6;
+}
+
+.site-header {
+    text-align: center;
+    padding: 35px 20px 25px;
+}
+
+.site-header h1 {
+    margin: 0;
+    color: var(--dark-purple);
+    font-size: 2.5rem;
+}
+
+.site-header p {
+    margin: 12px 0 30px;
+    font-size: 1.15rem;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.nav-button,
+.button {
+    display: inline-block;
+    background-color: var(--purple);
+    color: var(--white);
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.nav-button:hover,
+.button:hover {
+    background-color: var(--dark-purple);
+}
+
+.nav-button.active {
+    background-color: var(--dark-purple);
+}
+
+.page-container {
+    width: min(1100px, 96%);
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 18px rgba(101, 71, 53, 0.06);
+}
+
+.card h2 {
+    color: var(--brown);
+    margin: 0 0 20px;
+    font-size: 1.8rem;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin: 14px 0 6px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 14px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--brown);
+    background-color: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid var(--purple);
+    border-color: var(--purple);
+}
+
+textarea {
+    resize: vertical;
+}
+
+form .button {
+    margin-top: 12px;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 25px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead {
+    background-color: var(--light-purple);
+    color: var(--dark-purple);
+}
+
+th,
+td {
+    padding: 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+}
+
+tbody tr:hover {
+    background-color: var(--cream);
+}
+
+.actions {
+    white-space: nowrap;
+}
+
+.small-button {
+    padding: 7px 12px;
+    font-size: 0.9rem;
+    margin: 2px;
+}
+
+.delete-button {
+    background-color: var(--brown);
+}
+
+.delete-button:hover {
+    background-color: #493124;
+}
+
+.empty-message {
+    padding: 20px;
+    background-color: var(--cream);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--dark-purple);
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 600px) {
+    .site-header h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+}
+
+
+.notice {
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin: 0 0 20px;
+    font-weight: bold;
+}
+
+.success {
+    background-color: #E4F2E5;
+    color: #285B35;
+}
+
+.warning {
+    background-color: #F5EBDD;
+    color: #654735;
+    border: 1px solid #D9BFA9;
+}
+
+
+/* Menu item action buttons */
+.action-buttons {
+    white-space: nowrap;
+    min-width: 150px;
+}
+
+.action-button {
+    display: inline-block;
+    padding: 8px 13px;
+    margin: 3px 2px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.edit-action {
+    background-color: #8064A2;
+    color: #FFFFFF;
+}
+
+.edit-action:hover {
+    background-color: #684B89;
+    color: #FFFFFF;
+}
+
+.delete-action {
+    background-color: #6B4937;
+    color: #FFFFFF;
+}
+
+.delete-action:hover {
+    background-color: #503426;
+    color: #FFFFFF;
+}
+
+.action-button:hover {
+    transform: translateY(-1px);
+}
+
+/* Navigation layout */
+.header-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    margin: 20px auto 0;
+    padding: 0 12px 6px;
+    box-sizing: border-box;
+}
+
+.header-actions .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+}
+
+/* Logout button on a separate row */
+.header-actions .logout-button {
+    position: static;
+    transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    background-color: #72503D;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.header-actions .logout-button:hover {
+    background-color: #5E4030;
+    color: #FFFFFF;
+}
+
+/* FINAL FIX: Separate the navigation and logout button */
+header.site-header .header-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 18px !important;
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 20px auto 0 !important;
+    padding: 0 12px 8px !important;
+    box-sizing: border-box !important;
+}
+
+header.site-header .header-actions .navigation {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+header.site-header .header-actions .logout-button {
+    position: static !important;
+    display: inline-block !important;
+    transform: none !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+}
